@@ -2,12 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Heart, Gift, Star, Sparkles, Cake } from "lucide-react";
+import { Heart, Gift, Cake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Confetti, type ConfettiRef } from "@/components/magicui/confetti";
 import { SparklesText } from "@/components/magicui/sparkles-text";
-import { AuroraText } from "@/components/magicui/aurora-text";
 import { MorphingText } from "@/components/magicui/morphing-text";
 import Link from "next/link";
 
