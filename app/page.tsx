@@ -36,7 +36,7 @@ export default function BirthdayCelebration() {
   ];
 
   const [isPaused, setIsPaused] = useState(false);
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   // Using CSS animation-play-state to pause in current position
   useEffect(() => {
@@ -150,12 +150,12 @@ export default function BirthdayCelebration() {
               </h2>
 
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed italic font-light">
-                "On this special day, I wish you all the happiness your heart
-                can hold, all the dreams your mind can imagine, and all the love
-                this world can give. May your birthday be as wonderful as you
-                are, and may the coming year bring you countless reasons to
-                smile. I'm so blessed to have you in my life, and I promise to
-                cherish every moment we share together."
+                &ldquo;On this special day, I wish you all the happiness your
+                heart can hold, all the dreams your mind can imagine, and all
+                the love this world can give. May your birthday be as wonderful
+                as you are, and may the coming year bring you countless reasons
+                to smile. I&apos;m so blessed to have you in my life, and I
+                promise to cherish every moment we share together.&rdquo;
               </p>
 
               <div className="mt-10 flex justify-center">

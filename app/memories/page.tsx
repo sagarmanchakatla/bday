@@ -15,9 +15,18 @@ import { Lens } from "@/components/magicui/lens";
 import { Input } from "@/components/ui/input";
 import { Heart } from "lucide-react";
 
+// Define the type for a Memory object
+type Memory = {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  favorite: boolean;
+};
+
 export default function MemoriesPage() {
   // Sample memories data - in a real app, this would come from an API or database
-  const [memories, setMemories] = useState([
+  const [memories, setMemories] = useState<Memory[]>([
     {
       id: 1,
       title: "Churgate Date",
@@ -76,11 +85,11 @@ export default function MemoriesPage() {
     },
   ]);
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [activeFilter, setActiveFilter] = useState<"all" | "favorites">("all");
 
   // Toggle favorite status
-  const toggleFavorite = (id) => {
+  const toggleFavorite = (id: number) => {
     setMemories(
       memories.map((memory) =>
         memory.id === id ? { ...memory, favorite: !memory.favorite } : memory
